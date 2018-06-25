@@ -54,7 +54,6 @@ class Student
 
       name = DB[:conn].execute(sql)
       self.find_by_name(name)
-      binding.pry
   end
 
   def save
