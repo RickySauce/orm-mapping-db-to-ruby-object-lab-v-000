@@ -58,6 +58,15 @@ class Student
   end
 
   def first_X_students_in_grade_10(variable)
+    sql = <<-SQL
+      SELECT name
+      FROM students
+      WHERE grade = 10
+      ORDER BY name
+      LIMIT ?
+    SQL
+
+    DB[:conn].execute(sql, variable)
   end
 
   def save
