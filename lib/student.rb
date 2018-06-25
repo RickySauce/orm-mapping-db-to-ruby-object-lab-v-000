@@ -52,7 +52,7 @@ class Student
       WHERE grade != 12
     SQL
 
-      name = DB[:conn].execute(sql).flatten[1]
+      names = DB[:conn].execute(sql).collect {|students| students[1]}
       self.find_by_name(name)
       binding.pry
   end
