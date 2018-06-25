@@ -75,6 +75,7 @@ class Student
       FROM students
       WHERE grade = 10
       ORDER BY name
+      ASC
       LIMIT 1
     SQL
 
