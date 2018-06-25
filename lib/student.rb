@@ -42,7 +42,7 @@ class Student
       WHERE grade = 9
     SQL
 
-      DB[:conn].execute(sql)[0]
+      DB[:conn].execute(sql).flatten
       binding.pry
   end
 
