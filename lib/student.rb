@@ -88,12 +88,11 @@ class Student
       SELECT name
       FROM students
       WHERE grade = ?
-      ORDER BY name
     SQL
 
     DB[:conn].execute(sql, variable)
   end
-  
+
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
