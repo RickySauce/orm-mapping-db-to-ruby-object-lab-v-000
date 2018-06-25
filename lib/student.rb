@@ -53,8 +53,8 @@ class Student
     SQL
 
       names = DB[:conn].execute(sql).collect {|students| students[1]}
-      self.find_by_name(name)
-      binding.pry
+      students = names.collect {|name| self.find_by_name(name)}
+      students
   end
 
   def save
