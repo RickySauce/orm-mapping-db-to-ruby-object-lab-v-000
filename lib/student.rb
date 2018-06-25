@@ -54,6 +54,7 @@ class Student
 
       name = DB[:conn].execute(sql).flatten[1]
       self.find_by_name(name)
+      binding.pry
   end
 
   def save
