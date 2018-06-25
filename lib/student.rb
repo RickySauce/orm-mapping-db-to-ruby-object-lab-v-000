@@ -78,7 +78,7 @@ class Student
       LIMIT 1
     SQL
 
-    name = DB[:conn].execute(sql).flatten
+    name = DB[:conn].execute(sql)[0][0]
     self.find_by_name(name)
   end
 
