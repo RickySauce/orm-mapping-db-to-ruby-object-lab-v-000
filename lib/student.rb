@@ -52,8 +52,7 @@ class Student
       WHERE grade != 12
     SQL
 
-      DB[:conn].execute(sql)
-      binding.pry
+      DB[:conn].execute(sql).flatten
   end
 
   def save
