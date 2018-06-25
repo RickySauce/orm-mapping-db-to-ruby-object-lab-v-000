@@ -52,8 +52,7 @@ class Student
       WHERE grade != 12
     SQL
 
-      name = DB[:conn].execute(sql).flatten[1]
-      self.find_by_name(name)
+      DB[:conn].execute(sql)
   end
 
   def save
