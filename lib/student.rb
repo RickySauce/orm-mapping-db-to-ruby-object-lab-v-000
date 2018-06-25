@@ -52,7 +52,9 @@ class Student
       WHERE grade != 12
     SQL
 
-      DB[:conn].execute(sql)
+      name = DB[:conn].execute(sql)
+      self.find_by_name(name)
+      binding.pry
   end
 
   def save
