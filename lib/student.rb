@@ -57,7 +57,7 @@ class Student
       students
   end
 
-  def first_X_students_in_grade_10(variable)
+  def self.first_X_students_in_grade_10(variable)
     sql = <<-SQL
       SELECT name
       FROM students
