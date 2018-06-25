@@ -53,6 +53,7 @@ class Student
     SQL
 
       name = DB[:conn].execute(sql).flatten[1]
+      self.find_by_name(name)
   end
 
   def save
