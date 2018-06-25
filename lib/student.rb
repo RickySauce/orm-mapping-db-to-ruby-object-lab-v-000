@@ -43,7 +43,6 @@ class Student
     SQL
 
       DB[:conn].execute(sql).flatten
-      binding.pry
   end
 
   def self.students_below_12th_grade
