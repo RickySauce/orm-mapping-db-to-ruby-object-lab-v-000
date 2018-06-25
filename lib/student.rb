@@ -83,6 +83,17 @@ class Student
     self.find_by_name(name)
   end
 
+  def self.all_students_in_grade_X(variable)
+    sql = <<-SQL
+      SELECT name
+      FROM students
+      WHERE grade = ?
+      ORDER BY name
+    SQL
+
+    DB[:conn].execute(sql, variable)
+  end
+  
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
